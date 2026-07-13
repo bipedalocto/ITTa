@@ -2,6 +2,7 @@
 title: 물건들
 parent: 참가자 안내서
 nav_order: 2
+layout: default
 ---
 
 # 물건들
