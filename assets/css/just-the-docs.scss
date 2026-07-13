@@ -1,0 +1,8 @@
+---
+---
+
+// 테마 메인 스타일 로드
+@import "just-the-docs";
+
+// 작성하신 _sass/custom/custom.scss 파일을 메인 스타일에 강제로 합치도록 연결
+@import "custom/custom";
