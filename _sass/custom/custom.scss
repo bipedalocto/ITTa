@@ -1,3 +1,7 @@
+---
+# 이 대시 세 줄이 없으면 Jekyll이 SCSS를 CSS로 변환하지 않습니다!
+---
+
 // 1. 사용할 조선일보 굴림체 웹 폰트 정의
 @font-face {
     font-family: 'JoseonGulim';
@@ -6,18 +10,28 @@
     font-display: swap;
 }
 
-// 2. Just the Docs 테마 변수에 해당 폰트 이름 넣어주기
-// (가장 앞에 'JoseonGulim'을 배치해야 시스템이 이 폰트를 최우선으로 불러옵니다.)
-$body-font-family: 'JoseonGulim', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-$heading-font-family: 'JoseonGulim', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-
-// 3. 폰트 스타일에 따른 자간 및 렌더링 최적화
-body {
-  letter-spacing: -0.01em; // 굴림체 특성에 맞게 자간을 살짝 조절해 주면 가독성이 좋아집니다.
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+// 2. 전체 본문 및 입력창 폰트 강제 적용
+body, html, input, textarea, button, select {
+    font-family: 'JoseonGulim', -apple-system, BlinkMacSystemFont, sans-serif !important;
 }
-/* 모든 헤딩 태그의 왼쪽 여백(들여쓰기)을 완전히 제거 */
+
+// 3. 대제목, 소제목 및 사이트 메뉴 폰트 강제 적용
+h1, h2, h3, h4, h5, h6, 
+.site-title, 
+.nav-list-link, 
+.nav-list-expander, 
+.breadcrumb-nav-list-item {
+    font-family: 'JoseonGulim', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+// 4. 한글 가독성을 위한 자간 조절
+body {
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// 5. 헤딩 태그 왼쪽 여백 제거 및 앵커 아이콘 밀림 방지
 .main-content h1,
 .main-content h2,
 .main-content h3,
@@ -28,9 +42,8 @@ body {
     margin-left: 0 !important;
 }
 
-/* 제목 옆 앵커 링크 아이콘 때문에 글자가 밀리는 현상 방지 */
 .main-content .anchor-heading {
     position: absolute !important;
     transform: translateX(-100%) !important;
-    padding-right: 4px !important; /* 아이콘과 글자 사이 최소한의 간격 */
+    padding-right: 4px !important;
 }
