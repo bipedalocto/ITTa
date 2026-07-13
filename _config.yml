@@ -48,7 +48,7 @@ search.preview_words_after: 10
 # Set the search token separator
 # Default: /[\s\-/]+/
 # Example: enable support for hyphenated search words
-search.tokenizer_separator: /[\s/]+/
+search.tokenizer_separator: /[\s\-/.,:;!?~()[\]'"]+/
 
 # Display the relative url in search results
 # Supports true (default) or false
