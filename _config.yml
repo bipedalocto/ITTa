@@ -17,3 +17,10 @@ just_the_docs:
 sass:
   # Just the Docs가 커스텀 scss를 빌드하도록 지정
   custom_next: true
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
