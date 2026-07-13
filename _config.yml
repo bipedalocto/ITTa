@@ -9,3 +9,11 @@ aux_links:
 
 # Color scheme supports "light" (default) and "dark"
 color_scheme: dark
+
+# _config.yml
+just_the_docs:
+  # 이미 다른 설정들이 있을 수 있습니다.
+
+sass:
+  # Just the Docs가 커스텀 scss를 빌드하도록 지정
+  custom_next: true
