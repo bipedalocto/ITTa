@@ -2,6 +2,7 @@
 title: 캐릭터 생성
 parent: 참가자 안내서
 nav_order: 2
+layout: default
 ---
 #### 능력치
 * 캐릭터는 세 가지 능력치를 가집니다. **힘(STR)**, **재주(DEX)**, **의지(WIL)**. 
