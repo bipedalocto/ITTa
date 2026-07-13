@@ -9,3 +9,20 @@ $heading-font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI
 body {
   letter-spacing: -0.02em;
 }
+/* 모든 헤딩 태그의 왼쪽 여백(들여쓰기)을 완전히 제거 */
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5,
+.main-content h6 {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+/* 제목 옆 앵커 링크 아이콘 때문에 글자가 밀리는 현상 방지 */
+.main-content .anchor-heading {
+    position: absolute !important;
+    transform: translateX(-100%) !important;
+    padding-right: 4px !important; /* 아이콘과 글자 사이 최소한의 간격 */
+}
