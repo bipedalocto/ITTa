@@ -1,13 +1,21 @@
-// 1. 프리텐다드 웹 폰트 불러오기
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css");
+// 1. 사용할 조선일보 굴림체 웹 폰트 정의
+@font-face {
+    font-family: 'JoseonGulim';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
 
-// 2. Just the Docs 테마의 기본 폰트 변수 바꾸기
-$body-font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-$heading-font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+// 2. Just the Docs 테마 변수에 해당 폰트 이름 넣어주기
+// (가장 앞에 'JoseonGulim'을 배치해야 시스템이 이 폰트를 최우선으로 불러옵니다.)
+$body-font-family: 'JoseonGulim', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+$heading-font-family: 'JoseonGulim', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
-// 3. 한글 가독성을 위해 자간(글자 간격) 살짝 조절 (선택 사항)
+// 3. 폰트 스타일에 따른 자간 및 렌더링 최적화
 body {
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em; // 굴림체 특성에 맞게 자간을 살짝 조절해 주면 가독성이 좋아집니다.
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 /* 모든 헤딩 태그의 왼쪽 여백(들여쓰기)을 완전히 제거 */
 .main-content h1,
