@@ -1,2 +1,48 @@
 ---
 ---
+
+// 사용할 조선일보 굴림체 웹 폰트 정의
+@font-face {
+    font-family: 'JoseonGulim';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+// 전체 본문 및 입력창 폰트 강제 적용
+body, html, input, textarea, button, select {
+    font-family: 'JoseonGulim', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+// 대제목, 소제목 및 사이트 메뉴 폰트 강제 적용
+h1, h2, h3, h4, h5, h6, 
+.site-title, 
+.nav-list-link, 
+.nav-list-expander, 
+.breadcrumb-nav-list-item {
+    font-family: 'JoseonGulim', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+// 한글 가독성을 위한 자간 조절
+body {
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// 헤딩 태그 왼쪽 여백 제거 및 앵커 아이콘 밀림 방지
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5,
+.main-content h6 {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+.main-content .anchor-heading {
+    position: absolute !important;
+    transform: translateX(-100%) !important;
+    padding-right: 4px !important;
+}
