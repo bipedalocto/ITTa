@@ -1,32 +1,27 @@
 title: 망한 땅으로
 description: 본격 개짬통 OSR
-remote_theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs
 
-url: https://just-the-docs.github.io
+url: https://bipedalocto.github.io/ITTa
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  Repository: https://github.com/bipedalocto/ITTa
 
 # Color scheme supports "light" (default) and "dark"
 color_scheme: dark
 
-# _config.yml
+# Just the Docs configuration
 just_the_docs:
-  # 이미 다른 설정들이 있을 수 있습니다.
-
-sass:
-  # Just the Docs가 커스텀 scss를 빌드하도록 지정
-  custom_next: true
-
-defaults:
-  -
-    scope:
-      path: "" # an empty string here means all files in the project
-    values:
-      layout: "default"
+  collections:
+    # Define collections for any other content you'd like organized
+    playermanual:
+      name: Player Manual
+      nav_order: 2
+    background:
+      name: Background
+      nav_order: 3
 
 # Enable or disable the site search
-# Supports true (default) or false
 search_enabled: true
 
 # Split pages into sections that can be searched individually
@@ -57,5 +52,3 @@ search.rel_url: false
 # Enable or disable the search button that appears in the bottom right corner of every page
 # Supports true or false (default)
 search.button: true
-
-
